@@ -1,0 +1,45 @@
+# In yaml every text other than numerics are treated as strings so the double quotes can be ignored unlike programming languages that you can't
+name: name
+another_name: "another name"
+job: 'DevOps Engineer'
+
+# Strings in multiple lines
+bio: |
+ I am a DevOps Engineer, who loves working with YAML to create successful deployments.
+ I am also a nice dude!
+
+# write a single line in multiple lines
+message: >
+  This will
+  all be in 
+  a single line
+
+#numbers
+
+age: 18 # integer type
+marks: 97.25 # float
+commaValues: 540_000 # 540000
+
+# boolean 
+learningYaml: Yes # true is similar to y, Y, YES, True, TRUE, yes
+understandingYaml: No # false is similar to n, N, no, False, false, FALSE
+
+# YAML identifies the type during runtime but you can always specify the type too like other programming languages
+zero: !!int 0
+my_name: !!str John
+my_score: !!float 56.89
+# boolean: !!bool yes
+infinityNumber: !!float .inf
+not a number: .nan
+exponentialNumbers: 6.025E36
+
+# null data type
+nullVariable: !!null Null # or nullValue: !!null
+~: this is a null key
+
+
+# dates in Yaml
+date: !!timestamp 2025-07-25 # if no timezone is specified UTC is the default assumed
+Kenyan Time: 2025-07-25T05:25:45.25 +03:00 # timezone is specified
+# you can also use the date in a single line
+singleLineDate: !!timestamp "2025-07-25T05:25:45.25 +03:00"

@@ -1,0 +1,83 @@
+# list
+student: !!seq
+ - name
+ - registration number
+ - date of registration
+ - program
+ - year of study
+ - age
+ - marks
+
+# when some of the keys of the sequence are empty -> that type of sequence is known as sparse sequence
+sparse sequence: !!seq
+ - 
+ - name
+ - .nan
+ - .inf # etc
+
+# it is also possible to have nested sequence like list inside another list and many more
+animals:
+ # species of animals
+ - fish:
+   - tilapia
+
+ - amphibians:
+   - frog
+   - salamanda
+ 
+ - reptiles
+   - crocodile
+   - lizard
+
+ - mammals:
+   - human beings
+   - lion
+   - hippo
+
+
+# maps - these are key value pairs: to specify the type we use !!map
+groceries: !!map {
+ tomatoes: 25,
+ onions: 20,
+ vegetable oil: 390 # and many more
+}
+
+# just like lists it is possible to have nested maps too by placing other maps inside the others
+# we can also nest maps inside list and list inside maps and so on
+
+schools: {
+ school of computing and informatics: {
+  departments: [
+   computer science: [computer science, data science, computer technology, computer security and forensics],
+   information technology: [infomation technology, business information technology],
+   communication and journalism: [information science, journalism]
+  ]
+ },
+ school of engineering and architecture: {
+  departments: [
+   mechanical engineering: [mechanical engineering],
+   electrical and electronics engineering: [electrical engineering, electrical and electronics engineering, megatronic enginerring],
+   civil engineering: [civil engineering]
+  ]
+ }
+
+ # the nesting can continue on untill it is no longer needed
+}
+
+# YAML supports complex data types like sequences (lists) and mappings (dictionaries)
+# and it is possible to have a sequence of maps or a map of sequences
+# or a sequence of sequences and so on
+
+# similar representation can be done using indentation
+school:
+  school of computing and informatics:
+    departments:
+      computer science: [computer science, data science, computer technology, computer security and forensics]
+      information technology: [information technology, business information technology]
+      communication and journalism: [information science, journalism]
+  school of engineering and architecture:
+    departments:
+      mechanical engineering: [mechanical engineering]
+      electrical and electronics engineering: [electrical engineering, electrical and electronics engineering, megatronic enginerring]
+      civil engineering: [civil engineering]
+  # the nesting can continue on untill it is no longer needed

@@ -1,0 +1,56 @@
+# This is a comment in YAML and it doesn't allow for multi line comments
+# YAMLis a key-value pair stuff like say
+"Greeting": "Hello"
+
+# YAML support collections like lists and maps
+
+# List
+"List of fruits":
+ - apple
+ - mango
+ - banana
+ - orange
+
+# if you want to store the list in a single line without the indentation use
+fruits": ["apple", "mango", "guava", "banana", "orange"] # still similar to the indentation version
+
+# block but must obey the indentation
+fruit": [
+ "apple", 
+ "mango", 
+ "guava", 
+ "banana", 
+ "orange"
+]
+
+# for maps
+person: {name: "name", age: 27, city: "Nairobi"} # maps representation in a single line
+
+# maps with indentation 
+test: {
+ name: "test name",
+ duration: 24,
+ location: "cloud"
+}
+
+# Above is a block with indentation very important in syntax checking
+
+# YAML is very strict and case sensitive; like Apple and apple are completely different
+
+# Maps are key value paires
+
+
+# YAML documents can be seperated by --- for example
+
+---
+# Second document begins here
+
+---
+# Third document begins here
+
+---
+# Nth document and so on
+
+# and to end the document use ... as below
+
+...
