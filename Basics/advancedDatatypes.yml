@@ -81,3 +81,68 @@ school:
       electrical and electronics engineering: [electrical engineering, electrical and electronics engineering, megatronic enginerring]
       civil engineering: [civil engineering]
   # the nesting can continue on untill it is no longer needed
+
+
+# pairs: keys may have duplicates
+pair examle: !!pairs
+ - job: student
+ - job: teacher
+# this will be accessed as an array of hashtables - convert to JSON to view the actual representation and same as below
+pair example: !!pairs [job: student, job: teacher]
+
+# to ensure no duplicates we make the pair to be set as below
+set example: !!set
+ ? name
+ ? age
+# this won't allow values to this map since set only accept null as the value to the keys
+
+
+# if you have a key and you wan't the values to be in a sequence we can use dictionary (!!omap) for that case
+
+# dictionary
+continents: !!omap
+ - africa:
+   - northern africa: morocco, tunisia, algeria...
+   - western africa: nigeria, chad, guinea...
+   - eastern africa: kenya, uganda, tanzania, rwanda...
+   - southern africa: south africa, botswana, zimbabwe...
+   - central africa: congo...
+
+ - asia:
+   - china, india, united arab emmirates, saudi, singapore, korea, japan...
+ 
+ - america:
+   - north america: 
+   - south america: jamaica, brazil
+
+ - australia and newzeland:
+   - australia
+   - newzeland
+
+ - europe:
+   - france, london, italy, russia, 
+
+
+# reusing some properties
+liking of a person: &likes
+ favourite fruit: mango
+ worst fruit: grapes
+
+# for example if you have properties or data that you want to apply to several objects copy pasting isn't idiomatic and there is where anchors comes in: to apply anchors we employ &base as be we want to apply the liking to a group of people
+
+person1:
+ name: Steven
+ age: 25
+ <<: *likes # apply the key value pair for the anchor here
+
+
+person2:
+ name: Tony
+ age: 19
+ <<: *likes # here too
+ dislikes: berries # I have overritten the dislikes of person2 and it's nolonger grapes
+
+# and so on
+
+
+

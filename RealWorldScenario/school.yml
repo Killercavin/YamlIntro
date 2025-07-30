@@ -1,0 +1,19 @@
+---
+school:
+ - Name: School A
+   Principal: Mr principal
+   Students: 
+    - Student 1:
+      Roll Number: 4509
+      Name: First Student
+      Marks: 96.96
+
+    - Student 2:
+      Roll Number: 2271
+      Name: Second Student
+      Marks: 65.34
+
+    - Student 3:
+      Roll Number: 8036
+      Name: Third Student
+      Marks: 82.07

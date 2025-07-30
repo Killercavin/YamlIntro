@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<School name="School A" principal="Mr Principal">
+ <Students>
+  <Student>
+   <Roll Number>4509</Roll Number>
+   <Name>"Name"</Name>
+   <Marks>96.96</Marks>
+  </Student>
+ </Students>
+</School>
